@@ -12,17 +12,11 @@ let city;
 let conditionText;
 let conditionIcon;
 
-let temperatureElement = document.querySelector('.js-temperature span');
+let temperatureElement = document.querySelector('.js-temperature');
 let countryElement = document.querySelector('.js-country');
-let cityElement = document.querySelector('.js-city span ');
+let cityElement = document.querySelector('.js-city');
 let conditionTextElement = document.querySelector('.js-condition');
 let conditionIconElement = document.querySelector('.js-icon');
-
-temperatureElement = temperature;
-countryElement = country;
-cityElement = city;
-conditionTextElement = conditionText;
-conditionIconElement = conditionIcon;
 
 
 const getWeather = async (cityEntered) => {
@@ -39,11 +33,11 @@ const getWeather = async (cityEntered) => {
     conditionText = weatherData.current.condition.text;
     conditionIcon = weatherData.current.condition.icon;
 
-    temperatureElement = temperature;
-    countryElement = country;
-    cityElement = city;
-    conditionTextElement = conditionText;
-    conditionIconElement = conditionIcon;
+    temperatureElement.textContent = temperature;
+    countryElement.textContent = country;
+    cityElement.textContent = city;
+    conditionTextElement.textContent = conditionText;
+    conditionIconElement.src = `https:${conditionIcon}`;
     // checkFunction();
   }catch (e) {
     console.log(e.name)
@@ -75,4 +69,4 @@ console.log("City:", cityElement);
 console.log("Condition Text:", conditionTextElement);
 console.log("Condition Icon URL:", conditionIconElement);
 }
-// checkFunction();
+checkFunction();
