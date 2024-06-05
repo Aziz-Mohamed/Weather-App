@@ -1,4 +1,5 @@
 import {countryCodeGenerator} from './countryCodes.js' ;
+import {triggerConfetti} from './confetti.js'
 
 const apiKey = 'b1973fb700ef4db4b0b54352240406' ;
 const form = document.querySelector('.js-city-search');
@@ -41,7 +42,7 @@ const getWeather = async (cityEntered) => {
     cityElement.textContent = city;
     conditionTextElement.textContent = conditionText;
     conditionIconElement.src = `https:${conditionIcon}`;
-    checkFunction();
+    // checkFunction();
   }catch (e) {
     console.log(e.name)
   }
@@ -53,23 +54,42 @@ form.addEventListener("submit", (e) => {
   cityEntered = document.querySelector('.js-city-Name').value;
   if (cityEntered) { 
     getWeather(cityEntered);
+    showWeatherCard();
+
   } else {
     console.error("Please enter a city name");
   }
 })
 
 
-const checkFunction = () => {
-console.log("$$Temperature:", temperature);
-console.log("$$Country:", country);
-console.log("$$City:", city);
-console.log("$$Condition Text:", conditionText);
-console.log("$$Condition Icon URL:", conditionIcon);
+// const checkFunction = () => {
+// console.log("$$Temperature:", temperature);
+// console.log("$$Country:", country);
+// console.log("$$City:", city);
+// console.log("$$Condition Text:", conditionText);
+// console.log("$$Condition Icon URL:", conditionIcon);
 
-console.log("Temperature:", temperatureElement);
-console.log("Country:", countryElement);
-console.log("City:", cityElement);
-console.log("Condition Text:", conditionTextElement);
-console.log("Condition Icon URL:", conditionIconElement);
-}
+// console.log("Temperature:", temperatureElement);
+// console.log("Country:", countryElement);
+// console.log("City:", cityElement);
+// console.log("Condition Text:", conditionTextElement);
+// console.log("Condition Icon URL:", conditionIconElement);
+// }
 // checkFunction();
+
+triggerConfetti ();
+
+
+function showWeatherCard () {
+  const weatherCardsContainer = document.querySelector('.weather-cards-container');
+
+  function modifyWeatherCardsStyles() {
+    weatherCardsContainer.classList.remove('weather-cards-container--hidden');
+    weatherCardsContainer.style.transition = 'opacity 0.3s ease-in-out, height 0.3s ease-in-out';
+    weatherCardsContainer.style.opacity = '1';
+    weatherCardsContainer.style.height = 'auto'; 
+  }
+  setTimeout(modifyWeatherCardsStyles, 200); 
+}
+
+

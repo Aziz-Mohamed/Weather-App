@@ -11,7 +11,7 @@
   <!-- Google Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <title>Weather App</title>
 </head>
@@ -24,17 +24,24 @@
         <input class="search-field js-city-Name" type="text" placeholder="Search for a city">
         <button class="submit-button">SUBMIT</button>
       </form>
-      <div class="weather-cards-container w-60">
+      <div class="weather-cards-container weather-cards-container--hidden  w-60">
         <div class="city-weather-cards">
-          <h2> <pan class="js-city"> Paris</pan> <sup class="city-code js-country">FR</sup></h2>
-          <p class="temprature "> <span class="js-temperature"> 9</span> <sup> &deg; C </sup> </p>
-          <img class="weather-icon js-icon" src="./weather-icons-stroke-svg/cloud.svg" alt="">
-          <p class="weather-description js-condition">Light intensity Drizzle</p>
+          <h2> <pan class="js-city"> </pan> <sup class="city-code js-country"></sup></h2>
+          <p class="temperature "> <span class="js-temperature"> </span> <sup> &deg; C </sup> </p>
+          <img class="weather-icon js-icon" src="./weather-icons-stroke-svg/cloud.svg" alt="Weather Icon">
+          <p class="weather-description js-condition"></p>
         </div>
       </div>
     </div>
   </div>
-  <script></script>
+
+  <div class="confetti-container">
+    <h3 class="celebrate-text">Let's <button id="confettiButton">Celebrate</button> our second project</h3>
+  </div>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <!-- MY JS  -->
   <script  type="module"  src="./js/script.js"></script>
 </body>
 </html>

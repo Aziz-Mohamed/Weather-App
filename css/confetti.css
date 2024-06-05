@@ -1,0 +1,39 @@
+.confetti-container {
+  display: flex;
+  justify-content: center;
+  /* padding-left: 16%; */
+}
+
+.celebrate-text {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.25rem;
+}
+
+#confettiButton {
+  width: 8.75rem; 
+  height: 8.75rem; 
+  padding: 1.25rem; 
+  font-family: 'Roboto';
+  font-size: 1.5rem; 
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffcc00, #ff9900);
+  color: #fff;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+  justify-self: center;
+}
+
+#confettiButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.9375rem 1.875rem rgba(0, 0, 0, 0.3); 
+}
+
+#confettiButton:active {
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.2); 
+}

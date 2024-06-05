@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  .content-position {
+    width: 95%;
+  }
+  .container {
+    width: 100%;
+  }
+  .city-weather-cards {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .search-field {
+    font-size: 1.1rem;
+  }
+  .temperature {
+    font-size: 2.5rem; 
+  }
+  .temperature sup {
+    font-size: 1.5rem; 
+  }
+  .celebrate-text {
+    font-size: 1.2rem;
+  }
+  #confettiButton {
+    width: 7.5rem; 
+    height: 7.5rem; 
+    font-size: 1rem; 
+  }
+}

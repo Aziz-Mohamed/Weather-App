@@ -1,0 +1,52 @@
+.city-weather-cards {
+  background-color: #fff;
+  height: auto; 
+  width: 100%;
+  max-width: 12.5rem; 
+  min-width: 16rem;
+  border-radius: 18px; 
+  padding: 1.875rem; 
+  margin: 1.25rem auto; 
+  box-sizing: border-box; 
+}
+.weather-cards-container--hidden {
+  opacity: 0 ;
+  height: 0;
+}
+.city-weather-cards h2 {
+  font-weight: 400;
+  margin-bottom: 1.25rem; 
+}
+
+.city-code {
+  color: #fff;
+  background-color: #ff8c02;
+  padding: 0.25rem 0.5rem; 
+  border-radius: 18px; 
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+.temperature {
+  font-size: 4.375rem; 
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.temperature sup {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-left: -0.9375rem; 
+  word-spacing: -0.625rem; 
+}
+
+.weather-icon {
+  height: 6.25rem; 
+}
+
+.weather-description {
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.2;
+}
