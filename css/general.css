@@ -27,7 +27,7 @@ body {
 
 .container {
   width: 100%;
-  border: 0.25rem solid rgba(255, 255, 255, 0.4); 
+  /* border: 0.25rem solid rgba(255, 255, 255, 0.4);  */
   border-radius: 18px; 
   display: flex;
   flex-direction: column;
@@ -41,4 +41,8 @@ h1 {
   font-size: 3rem; 
   text-align: center;
   margin: 0 0 1.875rem 0;
+}
+.error-msg{
+  color: #fff;
+  font-size: 16px;
 }
