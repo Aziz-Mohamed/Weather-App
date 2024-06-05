@@ -1,13 +1,15 @@
+import {countryCodeGenerator} from './countryCodes.js' ;
+
 const apiKey = 'b1973fb700ef4db4b0b54352240406' ;
 const form = document.querySelector('.js-city-search');
 let searchbar = document.querySelector('js-city-Name');
-
 
 let cityEntered;
 let weatherData;
 
 let temperature;
 let country;
+let countryShorten;
 let city;
 let conditionText;
 let conditionIcon;
@@ -29,16 +31,17 @@ const getWeather = async (cityEntered) => {
 
     temperature = weatherData.current.temp_c;
     country = weatherData.location.country;
+    countryShorten = countryCodeGenerator(country);
     city = weatherData.location.region;
     conditionText = weatherData.current.condition.text;
     conditionIcon = weatherData.current.condition.icon;
 
     temperatureElement.textContent = temperature;
-    countryElement.textContent = country;
+    countryElement.textContent = countryShorten;
     cityElement.textContent = city;
     conditionTextElement.textContent = conditionText;
     conditionIconElement.src = `https:${conditionIcon}`;
-    // checkFunction();
+    checkFunction();
   }catch (e) {
     console.log(e.name)
   }
@@ -69,4 +72,4 @@ console.log("City:", cityElement);
 console.log("Condition Text:", conditionTextElement);
 console.log("Condition Icon URL:", conditionIconElement);
 }
-checkFunction();
+// checkFunction();
